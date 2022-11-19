@@ -12,7 +12,7 @@ export function setCookies(string) {
 }
 
 export function getCookie(key) {
-  return Cookies.get(key) ?? localStorage.getItem(`cookie-${key}`);
+  return JSON.parse(Cookies.get(key)) ?? localStorage.getItem(`cookie-${key}`);
 }
 
 export function removeCookie(key) {
